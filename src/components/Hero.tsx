@@ -98,16 +98,15 @@ export default function Hero() {
 
             <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mb-8 leading-relaxed">
               Deploy ultra-realistic AI voice agents that handle inbound calls,
-              answer FAQs, qualify leads, and complete intake forms — all for
-              under{" "}
-              <span className="text-white font-semibold">$0.09 per minute</span>
+              answer FAQs,             qualify leads, and complete intake forms — for{" "}
+              <span className="text-white font-semibold">a flat monthly rate</span>
               . Callers can&apos;t tell the difference.
             </p>
 
             {/* Stats row */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-6 mb-10">
               {[
-                { value: "< $0.09", label: "per minute" },
+                { value: "Flat Rate", label: "monthly plans" },
                 { value: "99.2%", label: "caller satisfaction" },
                 { value: "<250ms", label: "response latency" },
                 { value: "24/7", label: "always available" },

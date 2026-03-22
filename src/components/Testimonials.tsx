@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     quote:
-      "At $0.085/minute, we replaced a $4,200/month answering service. The quality is ten times better and I have full transcripts of every call. No brainer.",
+      "For $199/month, we replaced a $4,200/month answering service. The quality is ten times better and I have full transcripts of every call. Total no-brainer.",
     name: "Rachel Torres",
     title: "Med Spa Director, Los Angeles CA",
     avatar: "RT",

@@ -1,11 +1,12 @@
 const plans = [
   {
     name: "Starter",
-    price: 49,
+    price: 99,
     description: "Perfect for solo practitioners and small offices.",
-    minutes: 600,
+    minutes: 150,
+    overage: "0.79",
     features: [
-      "600 minutes / month",
+      "150 minutes / month included",
       "1 AI voice agent",
       "Appointment scheduling",
       "Basic intake forms",
@@ -17,12 +18,13 @@ const plans = [
     highlight: false,
   },
   {
-    name: "Growth",
-    price: 129,
-    description: "For growing businesses handling high call volume.",
-    minutes: 1800,
+    name: "Professional",
+    price: 199,
+    description: "For busy practices and growing teams.",
+    minutes: 350,
+    overage: "0.69",
     features: [
-      "1,800 minutes / month",
+      "350 minutes / month included",
       "3 AI voice agents",
       "Everything in Starter",
       "CRM & calendar integrations",
@@ -36,13 +38,14 @@ const plans = [
   },
   {
     name: "Scale",
-    price: 299,
-    description: "For agencies and high-volume call centers.",
-    minutes: 5000,
+    price: 399,
+    description: "For high-volume call centers and agencies.",
+    minutes: 800,
+    overage: "0.59",
     features: [
-      "5,000 minutes / month",
+      "800 minutes / month included",
       "Unlimited agents",
-      "Everything in Growth",
+      "Everything in Professional",
       "White-label options",
       "Dedicated account manager",
       "Custom voice cloning",
@@ -69,25 +72,25 @@ export default function Pricing() {
             <span className="gradient-text">a human receptionist</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            The average receptionist costs $3,500/month. Callix handles more
-            calls, never calls in sick, and never puts anyone on hold — for
-            under $0.09 per minute.
+            The average receptionist costs $3,500/month. Callix answers every
+            call, never calls in sick, and never puts a caller on hold — for a
+            flat monthly rate.
           </p>
         </div>
 
         {/* Cost comparison bar */}
         <div className="max-w-3xl mx-auto mb-16 bg-[#0d0d1a] border border-white/5 rounded-2xl p-6">
           <div className="text-slate-400 text-sm text-center mb-4 font-medium">
-            Cost comparison — 1,800 minutes/month
+            Monthly cost comparison
           </div>
           <div className="space-y-3">
             {[
               { label: "Human Receptionist (full-time)", cost: 3500, max: 3500, color: "bg-red-500/70" },
-              { label: "Answering Service", cost: 420, max: 3500, color: "bg-orange-500/70" },
-              { label: "Callix AI (Growth plan)", cost: 129, max: 3500, color: "bg-gradient-to-r from-brand-500 to-accent-500" },
+              { label: "Traditional Answering Service", cost: 420, max: 3500, color: "bg-orange-500/70" },
+              { label: "Callix AI (Professional)", cost: 199, max: 3500, color: "bg-gradient-to-r from-brand-500 to-accent-500" },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-4">
-                <div className="w-40 text-xs text-slate-400 text-right flex-shrink-0">
+                <div className="w-44 text-xs text-slate-400 text-right flex-shrink-0">
                   {item.label}
                 </div>
                 <div className="flex-1 h-6 bg-white/5 rounded-full overflow-hidden">
@@ -135,8 +138,8 @@ export default function Pricing() {
                   </span>
                   <span className="text-slate-500 text-sm mb-1.5">/month</span>
                 </div>
-                <div className="text-xs text-brand-400 mt-1">
-                  ≈ ${(plan.price / plan.minutes).toFixed(3)}/min · all-in
+                <div className="text-xs text-slate-500 mt-1">
+                  ${plan.overage}/min for additional minutes
                 </div>
               </div>
 
@@ -175,7 +178,10 @@ export default function Pricing() {
 
         <p className="text-center text-slate-600 text-sm mt-8">
           All plans include a 14-day free trial. No credit card required.
-          Overage billed at $0.085/min.
+          Need more volume?{" "}
+          <a href="#" className="text-brand-400 hover:text-brand-300 transition-colors">
+            Contact us for custom enterprise pricing.
+          </a>
         </p>
       </div>
     </section>

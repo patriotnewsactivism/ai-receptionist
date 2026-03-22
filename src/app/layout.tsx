@@ -10,7 +10,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "Callix AI — Ultra-Realistic AI Voice Receptionist",
   description:
-    "The #1 AI voice receptionist. Answer every call, qualify leads, and take intake — 24/7 at under $0.09/min. Indistinguishable from a real human agent.",
+    "The #1 AI voice receptionist. Answer every call, qualify leads, and take intake — 24/7 for a flat monthly rate. Plans from $99/mo. Indistinguishable from a real human agent.",
   keywords: [
     "AI receptionist",
     "voice agent",

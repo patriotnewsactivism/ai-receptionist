@@ -35,7 +35,7 @@ export default function CTA() {
               "No credit card",
               "Setup in 4 minutes",
               "Cancel anytime",
-              "Under $0.09/min",
+              "Plans from $99/mo",
             ].map((pill) => (
               <span
                 key={pill}

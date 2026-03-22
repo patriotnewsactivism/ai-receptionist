@@ -34,7 +34,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed mb-4">
-              The world&apos;s most realistic AI voice receptionist. Under $0.09/min.
+              The world&apos;s most realistic AI voice receptionist. Flat monthly plans starting at $99.
             </p>
             <div className="flex gap-3">
               {/* Twitter/X */}
