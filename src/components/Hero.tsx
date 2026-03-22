@@ -90,26 +90,42 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
-              Every call answered.{" "}
-              <span className="gradient-text">Every lead captured.</span>
+              The AI receptionist{" "}
+              <span className="gradient-text">callers can&apos;t tell</span>
               <br />
-              <span className="text-slate-300">Around the clock.</span>
+              <span className="text-slate-300">isn&apos;t human.</span>
             </h1>
 
-            <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mb-8 leading-relaxed">
-              Deploy ultra-realistic AI voice agents that handle inbound calls,
-              answer FAQs,             qualify leads, and complete intake forms — for{" "}
-              <span className="text-white font-semibold">a flat monthly rate</span>
-              . Callers can&apos;t tell the difference.
+            <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mb-6 leading-relaxed">
+              Callix combines the{" "}
+              <span className="text-white font-medium">most realistic neural voice</span>
+              {" "}on the market, industry-leading{" "}
+              <span className="text-white font-medium">&lt;250ms response latency</span>
+              , and a fully{" "}
+              <span className="text-white font-medium">customizable knowledge base</span>
+              {" "}— so your agent answers every question exactly the way you would.
             </p>
+
+            {/* 3 core pillars as inline badges */}
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-8">
+              {[
+                { icon: "🎙️", label: "Neural-grade voice realism" },
+                { icon: "⚡", label: "<250ms response latency" },
+                { icon: "📚", label: "Custom knowledge base" },
+              ].map((b) => (
+                <span key={b.label} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-sm">
+                  <span>{b.icon}</span> {b.label}
+                </span>
+              ))}
+            </div>
 
             {/* Stats row */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-6 mb-10">
               {[
-                { value: "Flat Rate", label: "monthly plans" },
                 { value: "99.2%", label: "caller satisfaction" },
                 { value: "<250ms", label: "response latency" },
-                { value: "24/7", label: "always available" },
+                { value: "24/7", label: "always on" },
+                { value: "5 min", label: "to go live" },
               ].map((s) => (
                 <div key={s.label} className="text-center lg:text-left">
                   <div className="text-2xl font-bold gradient-text">

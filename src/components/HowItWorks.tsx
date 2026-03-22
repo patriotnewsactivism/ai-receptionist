@@ -1,30 +1,30 @@
 const steps = [
   {
     number: "01",
-    title: "Configure your agent",
+    title: "Build your knowledge base",
     description:
-      "Tell Callix about your business — your services, FAQs, intake questions, and escalation rules. Our no-code builder has you live in minutes.",
-    detail: "Average setup time: 4 minutes",
+      "Upload your FAQs, services, pricing, and policies. Paste your website URL and Callix scrapes it automatically. Add custom Q&A so your agent answers exactly the way you would.",
+    detail: "Updates go live instantly",
   },
   {
     number: "02",
-    title: "Forward your phone number",
+    title: "Choose your voice & persona",
     description:
-      "Point your existing business number or get a new one. Works with any carrier. No hardware. No hold music. No missed calls.",
-    detail: "Works with any existing number",
+      "Pick from our library of ultra-realistic neural voices — or clone your own. Give your agent a name, set its tone, and define escalation rules. No scripting required.",
+    detail: "Multiple voices available",
   },
   {
     number: "03",
-    title: "Aria answers every call",
+    title: "Forward your phone number",
     description:
-      "Your AI agent handles inbound calls 24/7 — taking intake, answering questions, scheduling appointments, and qualifying leads in real-time.",
-    detail: "24/7 — zero downtime",
+      "Point your existing business number to Callix or get a new dedicated number. Works with any carrier. No hardware. No hold music. No missed calls, ever.",
+    detail: "Works with any existing number",
   },
   {
     number: "04",
-    title: "Data syncs, you close",
+    title: "Go live — data syncs automatically",
     description:
-      "All call data, transcripts, and intake forms sync instantly to your CRM, email, or webhook. You focus on serving clients, not answering phones.",
+      "Your agent is live 24/7. Every call produces a full transcript, intake form, and summary synced to your CRM, EHR, or email. You focus on closing, not answering.",
     detail: "50+ integrations available",
   },
 ];
