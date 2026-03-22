@@ -2,7 +2,7 @@
 
 ## Current State
 
-**Template Status**: ✅ Ready for development
+**Project Status**: ✅ Callix AI — SaaS landing page built and deployed
 
 The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. It's ready for AI-assisted expansion to build any type of application.
 
@@ -14,6 +14,16 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 - [x] ESLint configuration
 - [x] Memory bank documentation
 - [x] Recipe system for common features
+- [x] Callix AI — full SaaS landing page (voice receptionist, <$0.09/min)
+  - Navbar (sticky, scroll-aware, mobile hamburger)
+  - Hero with interactive call simulation demo + wave visualizer
+  - Features (6-card grid: voice quality, latency, intake, scheduling, routing, analytics)
+  - How It Works (4-step process)
+  - Testimonials (masonry grid, 6 reviews)
+  - Pricing (3 tiers + cost comparison bar chart)
+  - CTA (email capture form)
+  - Footer (4-column links, social, compliance badges)
+  - Dark theme: #080810 bg, brand-purple/sky-blue gradient system, glow effects, grid-bg
 
 ## Current Structure
 
@@ -85,3 +95,4 @@ export async function GET() {
 | Date | Changes |
 |------|---------|
 | Initial | Template created with base setup |
+| 2026-03-22 | Built Callix AI SaaS landing page — full 8-section marketing site for AI voice receptionist product |
