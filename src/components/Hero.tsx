@@ -47,6 +47,23 @@ const DEMO_MESSAGES = [
   },
 ];
 
+function speakLine(text: string) {
+  if (typeof window === "undefined" || !window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.rate = 0.92;
+  utter.pitch = 1.08;
+  utter.volume = 1;
+  const assignVoice = () => {
+    const v = window.speechSynthesis.getVoices();
+    const fem = v.find((x) => x.lang.startsWith("en") && /samantha|victoria|karen|ava|allison|zira|hazel/i.test(x.name)) || v.find((x) => x.lang.startsWith("en"));
+    if (fem) utter.voice = fem;
+  };
+  if (window.speechSynthesis.getVoices().length > 0) assignVoice();
+  else window.speechSynthesis.onvoiceschanged = assignVoice;
+  window.speechSynthesis.speak(utter);
+}
+
 export default function Hero() {
   const [demoActive, setDemoActive] = useState(false);
   const [visibleMessages, setVisibleMessages] = useState(0);
@@ -55,22 +72,30 @@ export default function Hero() {
   useEffect(() => {
     if (!demoActive) {
       setVisibleMessages(0);
+      if (typeof window !== "undefined" && window.speechSynthesis) window.speechSynthesis.cancel();
       return;
     }
     let idx = 0;
     const show = () => {
       if (idx >= DEMO_MESSAGES.length) return;
       const msg = DEMO_MESSAGES[idx];
-      setIsAgentSpeaking(msg.role === "agent");
+      const isAgent = msg.role === "agent";
+      setIsAgentSpeaking(isAgent);
       setVisibleMessages((v) => v + 1);
+      if (isAgent) speakLine(msg.text);
       idx++;
+      // Pace based on agent line length vs short caller lines
+      const delay = isAgent ? Math.max(2000, msg.text.length * 38) : 1600;
       if (idx < DEMO_MESSAGES.length) {
-        setTimeout(show, 1800);
+        setTimeout(show, delay);
       } else {
-        setTimeout(() => setIsAgentSpeaking(false), 1000);
+        setTimeout(() => setIsAgentSpeaking(false), 1200);
       }
     };
-    setTimeout(show, 400);
+    setTimeout(show, 500);
+    return () => {
+      if (typeof window !== "undefined" && window.speechSynthesis) window.speechSynthesis.cancel();
+    };
   }, [demoActive]);
 
   return (

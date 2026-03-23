@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import VoicePlayground from "@/components/VoicePlayground";
 import KnowledgeBase from "@/components/KnowledgeBase";
+import LiveQA from "@/components/LiveQA";
 import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
@@ -14,7 +16,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
+      <VoicePlayground />
       <KnowledgeBase />
+      <LiveQA />
       <HowItWorks />
       <Testimonials />
       <Pricing />
