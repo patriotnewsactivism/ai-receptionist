@@ -24,6 +24,15 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
   - CTA (email capture form)
   - Footer (4-column links, social, compliance badges)
   - Dark theme: #080810 bg, brand-purple/sky-blue gradient system, glow effects, grid-bg
+- [x] Add more recipes (auth, email, testing)
+  - `.kilocode/recipes/add-auth.md` — NextAuth.js v5 authentication
+  - `.kilocode/recipes/add-email.md` — Resend transactional email
+  - `.kilocode/recipes/add-testing.md` — Vitest + React Testing Library
+- [x] Add example UI components
+  - `src/components/ui/Button.tsx` — Variants: primary, secondary, ghost, danger; sizes: sm, md, lg
+  - `src/components/ui/Card.tsx` — With optional hover glow and border effects
+  - `src/components/ui/Badge.tsx` — Variants: default, success, warning, danger, info
+  - `src/components/ui/Input.tsx` — With optional label and error state
 
 ## Current Structure
 
@@ -32,6 +41,8 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 | `src/app/page.tsx` | Home page | ✅ Ready |
 | `src/app/layout.tsx` | Root layout | ✅ Ready |
 | `src/app/globals.css` | Global styles | ✅ Ready |
+| `src/components/` | Landing page sections | ✅ Ready |
+| `src/components/ui/` | Reusable UI components (Button, Card, Badge, Input) | ✅ Ready |
 | `.kilocode/` | AI context & recipes | ✅ Ready |
 
 ## Current Focus
@@ -83,12 +94,13 @@ export async function GET() {
 | Recipe | File | Use Case |
 |--------|------|----------|
 | Add Database | `.kilocode/recipes/add-database.md` | Data persistence with Drizzle + SQLite |
+| Add Auth | `.kilocode/recipes/add-auth.md` | Authentication with NextAuth.js v5 |
+| Add Email | `.kilocode/recipes/add-email.md` | Transactional email with Resend |
+| Add Testing | `.kilocode/recipes/add-testing.md` | Unit/component testing with Vitest |
 
 ## Pending Improvements
 
-- [ ] Add more recipes (auth, email, etc.)
-- [ ] Add example components
-- [ ] Add testing setup recipe
+None — all initial pending items have been completed.
 
 ## Session History
 
@@ -96,3 +108,4 @@ export async function GET() {
 |------|---------|
 | Initial | Template created with base setup |
 | 2026-03-22 | Built Callix AI SaaS landing page — full 8-section marketing site for AI voice receptionist product |
+| 2026-04-23 | Added 3 new recipes (auth, email, testing) + 4 example UI components (Button, Card, Badge, Input) |
